@@ -4,10 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rim Bahadur Oli | Personal Portfolio</title>
-    <meta
-      name="description"
-      content="Official personal portfolio website of Rim Bahadur Oli from Rolpa, Nepal."
-    />
+    <meta name="description" content="Rim Bahadur Oli personal portfolio website featuring profile, gallery, blog, and contact details from Rolpa, Nepal." />
+    <meta name="keywords" content="Rim Bahadur Oli, personal portfolio, Rolpa Nepal, portfolio website, profile, gallery, blog, contact" />
+    <meta name="author" content="Rim Bahadur Oli" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Rim Bahadur Oli | Personal Portfolio" />
+    <meta property="og:description" content="Personal portfolio website of Rim Bahadur Oli from Rolpa, Nepal, featuring story, gallery, blog, and contact information." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./profile%20logo.jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rim Bahadur Oli | Personal Portfolio" />
+    <meta name="twitter:description" content="Personal portfolio website of Rim Bahadur Oli from Rolpa, Nepal." />
+    <meta name="twitter:image" content="./profile%20logo.jpeg" />
     <style>
       :root {
         --bg: #f3f7fc;
@@ -1137,7 +1145,6 @@
     <div class="loading-screen" id="loadingScreen" aria-live="polite">
       <div class="loader" aria-label="Page loading">
         <div class="loader-ring"></div>
-        <div class="loader-core">R</div>
       </div>
     </div>
 
@@ -1350,7 +1357,7 @@
               <div class="contact-info">
                 <div class="meta-box"><div class="icon">📍</div><div><small>Location</small><strong>Rolpa, Nepal</strong></div></div>
                 <div class="meta-box"><div class="icon">👤</div><div><small>Name</small><strong>Rim Bahadur Oli</strong></div></div>
-                <div class="meta-box"><div class="icon">📧</div><div><small>Email</small><strong>info@example.com</strong></div></div>
+                <div class="meta-box"><div class="icon">📧</div><div><small>Email</small><strong><a href="mailto:olir4310@gmail.com">olir4310@gmail.com</a></strong></div></div>
               </div>
             </div>
           </div>
@@ -1461,38 +1468,14 @@
 
     <script>
       const SOCIAL_LINKS = [
-        { name: 'Facebook', url: 'https://www.facebook.com/', icon: 'f' },
-        { name: 'TikTok', url: 'https://www.tiktok.com/', icon: '♪' },
+        { name: 'Facebook', url: 'https://www.facebook.com/share/1EDwouFdbw/', icon: 'f' },
+        { name: 'TikTok', url: 'https://www.tiktok.com/@ramesholi570?_r=1&_t=ZS-9AJt6zjMwVg', icon: '♪' },
         { name: 'Instagram', url: 'https://www.instagram.com/', icon: '◎' },
-        { name: 'YouTube', url: 'https://www.youtube.com/', icon: '▶' }
+        { name: 'Website', url: 'https://anamaction.com', icon: '◌' },
+        { name: 'YouTube', url: 'https://youtube.com/@user-nt7zp8ix9l?si=-1UWv7kTSvpOIxx2', icon: '▶' }
       ];
 
-      const VIDEOS = [
-        {
-          title: 'My First Video',
-          category: 'Memory',
-          date: '2026',
-          description: 'A personal introduction and a glimpse of the story behind my journey.',
-          thumbnail: './profile%20logo.jpeg',
-          url: 'https://www.youtube.com/embed/ScMzIvxBSi4?si=3vxx_qrR2Q_gPA6Z'
-        },
-        {
-          title: 'Personal Journey',
-          category: 'Journey',
-          date: '2026',
-          description: 'A simple presentation of life, growth, and the path ahead.',
-          thumbnail: './WhatsApp%20Image%202026-10-06%20at%209.39.21%20AM.jpeg',
-          url: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
-        },
-        {
-          title: 'Life & Memories',
-          category: 'Lifestyle',
-          date: '2026',
-          description: 'Moments and experiences that reflect life in Nepal and the path I am building.',
-          thumbnail: './gallery.jpeg',
-          url: 'https://www.youtube.com/embed/ysz5S6PUM-U'
-        }
-      ];
+      const VIDEOS = [];
 
       const BLOG_POSTS = [
         {
@@ -1502,30 +1485,6 @@
           description: 'A short introduction to my personal space and the purpose behind this website.',
           image: './profile%20logo.jpeg',
           content: 'This website is my personal space where I can share my story, memories, thoughts, and digital identity. I am excited to build my presence and keep documenting the journey ahead.'
-        },
-        {
-          title: 'My Story',
-          category: 'Story',
-          date: '2026',
-          description: 'A reflection on who I am, my roots, and why this journey matters to me.',
-          image: './WhatsApp%20Image%202026-10-06%20at%209.39.21%20AM.jpeg',
-          content: 'Every story begins with a place, a memory, and a purpose. My story is shaped by my roots in Rolpa, Nepal and the experiences that continue to guide my growth and learning.'
-        },
-        {
-          title: 'Life in Nepal',
-          category: 'Lifestyle',
-          date: '2026',
-          description: 'A small reflection on identity, culture, and personal growth in Nepal.',
-          image: './gallery.jpeg',
-          content: 'Life in Nepal brings warmth, meaning, and perspective. It reminds me that every moment holds learning, connection, and purpose.'
-        },
-        {
-          title: 'My Journey',
-          category: 'Journey',
-          date: '2026',
-          description: 'A look at the process of learning, growing, and building my personal identity.',
-          image: './profile%20logo.jpeg',
-          content: 'My journey is not just about where I am today, but about how I continue to learn and grow. This personal website is a step toward expressing that journey honestly and proudly.'
         }
       ];
 
@@ -1635,7 +1594,7 @@
       }
 
       function renderBlogs(filteredPosts = BLOG_POSTS) {
-        blogGrid.innerHTML = filteredPosts.map((post) => `
+        blogGrid.innerHTML = filteredPosts.map((post, index) => `
           <article class="blog-card">
             <div class="blog-thumb" style="background-image:url('${post.image}'); background-size:cover; background-position:center;"></div>
             <div class="blog-body">
@@ -1644,7 +1603,7 @@
               <p>${post.description}</p>
               <div class="card-row">
                 <span class="chip">Read</span>
-                <button class="link-btn" type="button" data-title="${post.title}">Read More</button>
+                <button class="link-btn" type="button" data-index="${index}">Read More</button>
               </div>
             </div>
           </article>
@@ -1652,8 +1611,12 @@
 
         blogGrid.querySelectorAll('.link-btn').forEach((button) => {
           button.addEventListener('click', () => {
-            const post = BLOG_POSTS.find((item) => item.title === button.dataset.title);
-            if (post) openBlogModal(post);
+            const clickedIndex = Number(button.dataset.index);
+            const post = filteredPosts[clickedIndex];
+            if (post) {
+              const postIndex = BLOG_POSTS.findIndex((item) => item.title === post.title);
+              window.location.href = `blog.html?post=${postIndex >= 0 ? postIndex : 0}`;
+            }
           });
         });
       }
@@ -1678,7 +1641,7 @@
           <article class="social-card">
             <div class="social-icon">${item.icon}</div>
             <h4>${item.name}</h4>
-            <p>${item.name === 'Facebook' ? 'Connect and follow my updates.' : item.name === 'TikTok' ? 'Short-form moments and videos.' : item.name === 'Instagram' ? 'A glimpse into my life and moments.' : 'My video stories and experiences.'}</p>
+            <p>${item.name === 'Facebook' ? 'Connect and follow my updates.' : item.name === 'TikTok' ? 'Short-form moments and videos.' : item.name === 'Instagram' ? 'A glimpse into my life and moments.' : item.name === 'Website' ? 'Explore my online presence and work.' : 'My video stories and experiences.'}</p>
             <a class="link-btn" href="${item.url}" target="_blank" rel="noreferrer noopener">Visit</a>
           </article>
         `).join('');
@@ -1697,23 +1660,8 @@
       }
 
       function openBlogModal(blog) {
-        const modal = document.getElementById('blogModal');
-        const content = document.getElementById('blogModalContent');
-        const title = document.getElementById('blogModalTitle');
-        title.textContent = blog.title;
-        content.innerHTML = `
-          <div style="display:grid; gap:16px;">
-            <img src="${blog.image}" alt="${blog.title}" style="border-radius:18px; max-height:260px; object-fit:cover;" />
-            <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; color:var(--muted); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em;">
-              <span>${blog.category}</span>
-              <span>•</span>
-              <span>${blog.date}</span>
-            </div>
-            <p style="margin:0; color:var(--muted); line-height:1.8;">${blog.content}</p>
-          </div>
-        `;
-        modal.classList.add('open');
-        modal.setAttribute('aria-hidden', 'false');
+        const index = BLOG_POSTS.findIndex((item) => item.title === blog.title);
+        window.location.href = `blog.html?post=${index >= 0 ? index : 0}`;
       }
 
       function openLightbox(index) {
